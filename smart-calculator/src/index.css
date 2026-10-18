@@ -1,0 +1,245 @@
+@import "tailwindcss";
+
+/* =========================================
+   COMMON BUTTON STYLE
+========================================= */
+
+.calc-number,
+.calc-scientific,
+.calc-orange,
+.calc-equal {
+  height: 58px;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+  user-select: none;
+
+  transition:
+    transform 0.12s ease,
+    background 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+/* Normal numbers */
+
+.calculator-dark .calc-number {
+  background: #252525 !important;
+  color: #ffffff !important;
+
+  box-shadow: 0 4px 0 #111111;
+}
+
+.calculator-dark .calc-number:hover {
+  background: #333333 !important;
+  transform: translateY(-2px);
+}
+
+.calculator-dark .calc-number:active {
+  transform: scale(0.94);
+}
+
+
+/* Scientific buttons */
+
+.calculator-dark .calc-scientific {
+  background: #34252c !important;
+  color: #ffb3c7 !important;
+
+  box-shadow: 0 4px 0 #171014;
+}
+
+.calculator-dark .calc-scientific:hover {
+  background: #49313b !important;
+  color: #ffd5e0 !important;
+
+  transform: translateY(-2px);
+}
+
+.calculator-dark .calc-scientific:active {
+  transform: scale(0.94);
+}
+
+
+/* Operators */
+
+.calculator-dark .calc-orange {
+  background: #3c2d1b !important;
+  color: #ffc65c !important;
+
+  box-shadow: 0 4px 0 #1d1408;
+}
+
+.calculator-dark .calc-orange:hover {
+  background: #55401f !important;
+  color: #ffda83 !important;
+
+  transform: translateY(-2px);
+}
+
+.calculator-dark .calc-orange:active {
+  transform: scale(0.94);
+}
+
+
+/* Equal */
+
+.calculator-dark .calc-equal {
+  background: #e2557d !important;
+  color: #ffffff !important;
+
+  box-shadow: 0 4px 0 #8e2945;
+}
+
+.calculator-dark .calc-equal:hover {
+  background: #ef6b8e !important;
+  transform: translateY(-2px);
+}
+
+.calculator-dark .calc-equal:active {
+  transform: scale(0.94);
+}
+
+
+/* =========================================
+   LIGHT MODE
+========================================= */
+
+.calculator-light .calc-number {
+  background: #f1eeee !important;
+  color: #30282a !important;
+
+  box-shadow: 0 4px 0 #d2cccc;
+}
+
+.calculator-light .calc-number:hover {
+  background: #e5dfdf !important;
+  transform: translateY(-2px);
+}
+
+.calculator-light .calc-number:active {
+  transform: scale(0.94);
+}
+
+
+.calculator-light .calc-scientific {
+  background: #f8e5eb !important;
+  color: #9f3d59 !important;
+
+  box-shadow: 0 4px 0 #dfc6ce;
+}
+
+.calculator-light .calc-scientific:hover {
+  background: #f1d5df !important;
+  transform: translateY(-2px);
+}
+
+.calculator-light .calc-scientific:active {
+  transform: scale(0.94);
+}
+
+
+.calculator-light .calc-orange {
+  background: #fff0d2 !important;
+  color: #9c6509 !important;
+
+  box-shadow: 0 4px 0 #e5cfaa;
+}
+
+.calculator-light .calc-orange:hover {
+  background: #ffe4b5 !important;
+  transform: translateY(-2px);
+}
+
+.calculator-light .calc-orange:active {
+  transform: scale(0.94);
+}
+
+
+.calculator-light .calc-equal {
+  background: #e2557d !important;
+  color: white !important;
+
+  box-shadow: 0 4px 0 #9d304f;
+}
+
+.calculator-light .calc-equal:hover {
+  background: #ed6a8d !important;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   CLICK ANIMATION
+========================================= */
+
+.calc-number:active,
+.calc-scientific:active,
+.calc-orange:active,
+.calc-equal:active {
+  animation: buttonPress 0.18s ease;
+}
+
+@keyframes buttonPress {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.92);
+  }
+
+  100% {
+    transform: scale(0.96);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+  .calc-number,
+  .calc-orange,
+  .calc-equal {
+    height: 58px;
+    font-size: 17px;
+  }
+
+  .calc-scientific {
+    height: 52px;
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+  .calc-number,
+  .calc-orange,
+  .calc-equal {
+    height: 52px;
+    font-size: 15px;
+  }
+
+  .calc-scientific {
+    height: 46px;
+    font-size: 12px;
+  }
+}

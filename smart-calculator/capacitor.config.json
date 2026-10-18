@@ -1,0 +1,5 @@
+{
+  "appId": "com.scientificcalculator.app",
+  "appName": "Scientific Calculator",
+  "webDir": "dist"
+}
